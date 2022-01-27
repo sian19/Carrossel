@@ -33,4 +33,4 @@ clicar nos botões para passar as imagens na tela, automaticamente o valor desse
 paisagem na imagem.</li>
 </ul>
 <h3>Link do projeto:</h3>
-<a href="">clique aqui<a>
+<a href="https://carrossel.herokuapp.com/">clique aqui<a>
