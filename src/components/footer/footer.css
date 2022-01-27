@@ -1,0 +1,17 @@
+footer{
+    width: 100%;
+    background-color: var(--verdi-g);
+    color: var(--pale);
+}
+
+footer .center{
+    max-width: 350px;
+    text-align: center;
+    margin: 0 auto;;
+    padding: 12px 3%;
+    line-height: 26px;
+}
+
+footer  h3{
+    font-size: 16px;
+}

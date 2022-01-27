@@ -1,0 +1,33 @@
+.button-mob{
+    width: 90px;
+    height: 30px;
+
+    display: none;
+}
+
+button{
+    border: 0;
+    background-color: transparent;
+    width: 50%;
+    max-width: 35px;
+    height: 100%;
+}
+
+button img{
+    width: 100%;
+    height: auto;
+    transition: 0.6s;
+}
+
+button:hover > img{
+    width: calc(100% + 7px);
+}
+
+@media screen and (max-width: 500px){
+    .button-mob{
+        display: flex;
+        justify-content: space-between;
+
+        margin-top: 15px;
+    }
+}

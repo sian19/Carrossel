@@ -1,0 +1,21 @@
+header{
+    width: 100%;
+    background-color: var(--verdi-g);
+}
+
+header .center{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 3%;
+}
+
+.center > h2{
+    color: var(--pale);
+}
+
+
+@media screen and (max-width: 500px){
+    header .center{
+        text-align: center;
+    }
+}

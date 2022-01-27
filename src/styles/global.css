@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    --verdi-g: #75B9BE;
+    --opal: #A8CCC9;
+    --cambri: #B3D6C6;
+    --pale: #DCEAB2;
+    --june: #C7D66D;
+}
+
+body{
+    font-family: 'Noto Sans', sans-serif;
+
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+@media screen and (max-height: 600px){
+    body{
+        height: 100%;
+    }
+}

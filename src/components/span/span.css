@@ -1,0 +1,10 @@
+span{
+    width: 10px;
+}
+
+@media screen and (max-width: 500px){
+    span{
+        display: none;
+    }
+
+}
