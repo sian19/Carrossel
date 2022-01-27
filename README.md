@@ -1,70 +1,36 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Carrrossel de imagens
+Projeto de um carrossel para mostrar imagens de alguns lugares magníficos que existem no mundo.
+<h3>Imagens do projeto:</h3>
+<img src="https://github.com/sian19/Carrossel/blob/master/src/assets/modelo1.png">
+<img src="https://github.com/sian19/Carrossel/blob/master/src/assets/modelo2.png">
+<p>Este pequeno projeto foi feito usando o framework React, onde o usuário clica nos botôes e as imagens vão aparecendo na tela, como um carrossel, só que aqui o usuário pode passar as imagens como se fosse um slide, eu o chamo de carroossel pois a animação das imagens passando ficou como se fosse um carrossel.</p>
+<br/>
+<h3>Oque foi usado no desenvolvimento da aplicação:</h3>
+<ul>
+  <li>A aplicação foi desenvolvida em React usando hooks para renderizar e trabalhar os componentes.</li>
+  <li>Se criou um componente com cinco estados para armazenar o valor da propriedade de estilo transform e os definiu em trasnlateX, da forma que apenas uma
+imagem fique visível e ocupa-se a classe chamada carrossel. As outras imagens ficam ao lado da primeira em fila mas sem aparecer pois se usou o css para
+estilizar as imagens e esconder as que não eram visíveis. Definindo a tag img e colocando seu style com o valor dos estados, no caso cinco imagens com cinco 
+estados.</li>
+  <li>Ao usuário clicar no botão azul a direita dinamicamente a imagem que estava aparecendo na tela era arrastada para a esquerda até sumir da tela e então a próxima
+imagem era arrastada automaticamente da direita até ficar por completo dentro da classe carrosel dessa forma vísivel ao usuário. Então basta o usuário clicar no botão
+azul que da forma citada acima as imagens iam aparecendo e desaparecendo conforme ele clica no botão. O botão da esquerda funciona basicamente da mesma forma que o da
+direita a única diferença é que ao clicar nele as imagens vão sendo arrastadas da esquerda pra direita e assim por diante.</li>
+  <li>O ponto fundamental para o carrosel funcionar foi a criação do estado count e do estado back. No estado count toda vez que o usuário clicar em um dos botões ele
+incrementava um número ou decrementava dependendo de qual botão o usuário clicar, usando o valor que o estado count recebeu se passou esse estado por props no componente
+do carrossel(imgsCar), dentro desse componente se usou o useEffect e dentro um bloco de código foi criado com uma série de condições para definir quais valores e quais
+dos cinco estados(que foram criados e definidos com a propriedade transform como foi dito mais acima) iam ser alterados para fazer com que as imagens fossem passando no carrossel.
+O estado back seu valor inicial era de false, mas se o usuário clicar no botão da esquerda que faz com que as imagens voltem o valor de back mudava para true, então dentro do 
+bloco de códigos do useEffect se identificava através das condições que o usuário clicou para voltar pois o estado back estava em true, dessa forma se alterava o valor de style
+transform então se mudava as imagens de acordo com essas condições definidas e  usando o estado back e count como base. Se o usuário clicar no botão da direita o valor de back
+fica em false novamente assim as imagens iam novamente passar da direita para a esquerda.</li>
+  <li>O componente count recebe valores de 0 a 4, onde cada valor representa uma imagem, exemplo img1 era representada com o count quando recebia o valor de 0, dessa forma era identificado
+no código que essa imagem(img1) era pra aparecer na tela.</li>
+  <li>Se criou um componente com o nome de buttonMob, para renderizar os botões mobile quando o navegador atingisse o tamanho de 500px, nesse componente foi passado para ele através de
+props dus funções que fazem o trabalho de passar as imagens da esquerda para direita e da direita para a esquerda.</li>
+  <li>Se criou um componente com o nome de places, onde neste componente se tem um estado com o nome de text, então esse estado ele possui um valor inicial de uma string vazia, ao usuário
+clicar nos botões para passar as imagens na tela, automaticamente o valor desse estado(text) é alterado mudando assim o texto que vai aparecer na tela identificando o local da
+paisagem na imagem.</li>
+</ul>
+<h3>Link do projeto:</h3>
+<a href="">clique aqui<a>
